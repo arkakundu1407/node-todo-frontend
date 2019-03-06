@@ -33,7 +33,7 @@ pipeline {
              }
           }
        }
-     stage('Push Image'){
+     stage('Push Image') {
        steps{
          script{
            docker.withRegistry('',registryCredential) {
