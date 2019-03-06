@@ -3,7 +3,7 @@ pipeline {
      registry = "arkakundu1407/docker-pipeline"
      registryCredential = 'dockerhub'
      dockerImage = ''
-     containerId = sh(script: 'docker ps -aqf "name=node-app",returnStdout: true)
+     containerId = sh(script: 'docker ps -aqf "name=node-app"',returnStdout: true)
    }
    agent any
    tools {nodejs "node"}
