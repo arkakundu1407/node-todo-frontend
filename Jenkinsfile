@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Build') {
            steps {
-             sh 'npm install -D sonarqube-scanner'
+             sh 'npm install'
            }
          }
        stage('Test') {
