@@ -42,6 +42,7 @@ pipeline {
         }
       }
      }
+     
      stage ('Run container') {
        steps {
           sh 'docker run --name=node-app -d -p 3000:3000 $registry:$BUILD_NUMBER &'
