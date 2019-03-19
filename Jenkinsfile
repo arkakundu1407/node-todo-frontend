@@ -1,10 +1,10 @@
 pipeline {
-  environment {
+  /*environment {
      registry = "arkakundu1407/docker-pipeline"
      registryCredential = 'dockerhub'
      dockerImage = ''
      containerId = sh(script: 'docker ps -aqf "name=node-app"',returnStdout: true)
-   }
+   }*/
    agent any
    tools {nodejs "node"}
    
@@ -26,7 +26,7 @@ pipeline {
              }
            }  
            
-       stage('Building Image') {
+      /* stage('Building Image') {
          steps {
            script {
              dockerImage = docker.build registry + ":$BUILD_NUMBER"
@@ -47,7 +47,7 @@ pipeline {
        steps {
           sh 'docker run --name=node-app -d -p 3000:3000 $registry:$BUILD_NUMBER &'
        }
-     }
+     }*/
    }
  }
         
